@@ -151,11 +151,12 @@ DATABASES = {
         # Not used with sqlite3.
         "PASSWORD": "megasite_pass",
         # Set to empty string for localhost. Not used with sqlite3.
-        "HOST": "localhost",
+        "HOST": "/cloudsql/sgiri-156214:us-central1:megasite",
         # Set to empty string for default. Not used with sqlite3.
         "PORT": "3306",
     }
 }
+
 
 
 #########
