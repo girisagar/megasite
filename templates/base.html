@@ -46,12 +46,14 @@
 {% block extra_head %}{% endblock %}
 </head>
 
+{% comment %}          
 <body id="{% block body_id %}body{% endblock %}">
 <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
 
 <input type="filepicker" data-fp-apikey="AVu1g3PWrS7CC7SqSu4sqz"
 onchange="alert(event.fpfile.url)">
-          
+{% endcomment %}
+
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="container">
 <div class="navbar-header">
