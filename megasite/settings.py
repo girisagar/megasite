@@ -321,6 +321,7 @@ if os.path.exists(f):
     sys.modules[module_name] = module
     exec(open(f, "rb").read())
 
+RICHTEXT_FILTER_LEVEL = 2
 
 ####################
 # DYNAMIC SETTINGS #
