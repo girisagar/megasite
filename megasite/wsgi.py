@@ -12,12 +12,6 @@ import os
 from django.core.wsgi import get_wsgi_application
 from mezzanine.utils.conf import real_project_name
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE",
-                      "%s.settings" % real_project_name("megasite"))
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "megasite.settings" )
 
-from whitenoise.django import DjangoWhiteNoise
-  
 application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
-application = DjangoWhiteNoise(application)
-
