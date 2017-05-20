@@ -118,7 +118,7 @@ LANGUAGES = (
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = False
+DEBUG = True 
 
 SECRET_KEY = 'NLSADIUOI947NASLIDLU98U409843'
 # Whether a user's session cookie expires when the Web browser is closed.
@@ -158,6 +158,9 @@ DATABASES = {
     }
 }
 
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 #########
 # PATHS #
@@ -175,9 +178,6 @@ CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_APP
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = "/static/"
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Absolute path to the directory static files should be collected to.
@@ -199,6 +199,9 @@ MEDIA_URL = "http://sgiri.com/media/"
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
 
+STATIC_URL = "/static/"
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Package/module name to import the root urlpatterns from for the project.
 ROOT_URLCONF = "%s.urls" % PROJECT_APP
 
@@ -347,3 +350,6 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
