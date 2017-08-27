@@ -1,0 +1,72 @@
+[Sat Aug 26 17:24:46.259015 2017] [wsgi:error] [pid 29150] Not Found: /blog/media/uploads/blog/.thumbnails/chickenbiriyani_89035_16x9.jpg/chickenbiriyani_89035_16x9-600x0.jpg/
+[Sun Aug 27 12:16:51.116534 2017] [wsgi:error] [pid 6203] [remote 192.168.1.1:0] mod_wsgi (pid=6203): Target WSGI script '/var/www/sgiri.com/megasite/wsgi.py' cannot be loaded as Python module.
+[Sun Aug 27 12:16:51.121131 2017] [wsgi:error] [pid 6203] [remote 192.168.1.1:0] mod_wsgi (pid=6203): Exception occurred processing WSGI script '/var/www/sgiri.com/megasite/wsgi.py'.
+[Sun Aug 27 12:16:51.121277 2017] [wsgi:error] [pid 6203] [remote 192.168.1.1:0] Traceback (most recent call last):
+[Sun Aug 27 12:16:51.121412 2017] [wsgi:error] [pid 6203] [remote 192.168.1.1:0]   File "/var/www/sgiri.com/megasite/wsgi.py", line 24, in <module>
+[Sun Aug 27 12:16:51.121828 2017] [wsgi:error] [pid 6203] [remote 192.168.1.1:0]     from django.core.wsgi import get_wsgi_application
+[Sun Aug 27 12:16:51.121957 2017] [wsgi:error] [pid 6203] [remote 192.168.1.1:0] ImportError: No module named django.core.wsgi
+[Sun Aug 27 17:36:53.330882 2017] [wsgi:error] [pid 7748] Invalid HTTP_HOST header: '100.35.215.97'. You may need to add u'100.35.215.97' to ALLOWED_HOSTS.
+[Sun Aug 27 17:48:47.444626 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0] mod_wsgi (pid=8073): Target WSGI script '/var/www/sgiri.com/megasite/wsgi.py' cannot be loaded as Python module.
+[Sun Aug 27 17:48:47.444762 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0] mod_wsgi (pid=8073): Exception occurred processing WSGI script '/var/www/sgiri.com/megasite/wsgi.py'.
+[Sun Aug 27 17:48:47.444839 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0] Traceback (most recent call last):
+[Sun Aug 27 17:48:47.444910 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/var/www/sgiri.com/megasite/wsgi.py", line 27, in <module>
+[Sun Aug 27 17:48:47.445168 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     application = get_wsgi_application()
+[Sun Aug 27 17:48:47.445212 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Sun Aug 27 17:48:47.448006 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     django.setup(set_prefix=False)
+[Sun Aug 27 17:48:47.448058 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/__init__.py", line 22, in setup
+[Sun Aug 27 17:48:47.449182 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Sun Aug 27 17:48:47.449230 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/utils/log.py", line 75, in configure_logging
+[Sun Aug 27 17:48:47.450517 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     logging_config_func(logging_settings)
+[Sun Aug 27 17:48:47.450566 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/usr/lib/python2.7/logging/config.py", line 794, in dictConfig
+[Sun Aug 27 17:48:47.455172 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     dictConfigClass(config).configure()
+[Sun Aug 27 17:48:47.455266 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/usr/lib/python2.7/logging/config.py", line 576, in configure
+[Sun Aug 27 17:48:47.455359 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     '%r: %s' % (name, e))
+[Sun Aug 27 17:48:47.455450 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0] ValueError: Unable to configure handler u'file': [Errno 13] Permission denied: u'/usr/local/etc/logs/sgiri.com.log'
+[Sun Aug 27 17:48:47.743988 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0] mod_wsgi (pid=8073): Target WSGI script '/var/www/sgiri.com/megasite/wsgi.py' cannot be loaded as Python module.
+[Sun Aug 27 17:48:47.744097 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0] mod_wsgi (pid=8073): Exception occurred processing WSGI script '/var/www/sgiri.com/megasite/wsgi.py'.
+[Sun Aug 27 17:48:47.744160 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0] Traceback (most recent call last):
+[Sun Aug 27 17:48:47.744278 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/var/www/sgiri.com/megasite/wsgi.py", line 27, in <module>
+[Sun Aug 27 17:48:47.744375 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     application = get_wsgi_application()
+[Sun Aug 27 17:48:47.744413 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Sun Aug 27 17:48:47.744606 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     django.setup(set_prefix=False)
+[Sun Aug 27 17:48:47.744647 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/__init__.py", line 22, in setup
+[Sun Aug 27 17:48:47.744715 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Sun Aug 27 17:48:47.744752 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/utils/log.py", line 75, in configure_logging
+[Sun Aug 27 17:48:47.744820 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     logging_config_func(logging_settings)
+[Sun Aug 27 17:48:47.744856 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/usr/lib/python2.7/logging/config.py", line 794, in dictConfig
+[Sun Aug 27 17:48:47.744919 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     dictConfigClass(config).configure()
+[Sun Aug 27 17:48:47.744955 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]   File "/usr/lib/python2.7/logging/config.py", line 576, in configure
+[Sun Aug 27 17:48:47.745015 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0]     '%r: %s' % (name, e))
+[Sun Aug 27 17:48:47.745074 2017] [wsgi:error] [pid 8073] [remote 192.168.1.1:0] ValueError: Unable to configure handler u'file': [Errno 13] Permission denied: u'/usr/local/etc/logs/sgiri.com.log'
+[Sun Aug 27 17:51:03.049650 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0] mod_wsgi (pid=8239): Target WSGI script '/var/www/sgiri.com/megasite/wsgi.py' cannot be loaded as Python module.
+[Sun Aug 27 17:51:03.049771 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0] mod_wsgi (pid=8239): Exception occurred processing WSGI script '/var/www/sgiri.com/megasite/wsgi.py'.
+[Sun Aug 27 17:51:03.049840 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0] Traceback (most recent call last):
+[Sun Aug 27 17:51:03.049908 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]   File "/var/www/sgiri.com/megasite/wsgi.py", line 27, in <module>
+[Sun Aug 27 17:51:03.050155 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]     application = get_wsgi_application()
+[Sun Aug 27 17:51:03.050197 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Sun Aug 27 17:51:03.050357 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]     django.setup(set_prefix=False)
+[Sun Aug 27 17:51:03.050399 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/__init__.py", line 22, in setup
+[Sun Aug 27 17:51:03.050554 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Sun Aug 27 17:51:03.050593 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/utils/log.py", line 75, in configure_logging
+[Sun Aug 27 17:51:03.050898 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]     logging_config_func(logging_settings)
+[Sun Aug 27 17:51:03.050938 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]   File "/usr/lib/python2.7/logging/config.py", line 794, in dictConfig
+[Sun Aug 27 17:51:03.051979 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]     dictConfigClass(config).configure()
+[Sun Aug 27 17:51:03.052023 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]   File "/usr/lib/python2.7/logging/config.py", line 576, in configure
+[Sun Aug 27 17:51:03.052124 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0]     '%r: %s' % (name, e))
+[Sun Aug 27 17:51:03.052201 2017] [wsgi:error] [pid 8239] [remote 192.168.1.1:0] ValueError: Unable to configure handler u'file': [Errno 13] Permission denied: u'/var/www/log/sgiri.com.log'
+[Sun Aug 27 17:53:29.744797 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0] mod_wsgi (pid=8428): Target WSGI script '/var/www/sgiri.com/megasite/wsgi.py' cannot be loaded as Python module.
+[Sun Aug 27 17:53:29.744914 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0] mod_wsgi (pid=8428): Exception occurred processing WSGI script '/var/www/sgiri.com/megasite/wsgi.py'.
+[Sun Aug 27 17:53:29.744987 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0] Traceback (most recent call last):
+[Sun Aug 27 17:53:29.745056 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]   File "/var/www/sgiri.com/megasite/wsgi.py", line 27, in <module>
+[Sun Aug 27 17:53:29.745299 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]     application = get_wsgi_application()
+[Sun Aug 27 17:53:29.745342 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+[Sun Aug 27 17:53:29.745496 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]     django.setup(set_prefix=False)
+[Sun Aug 27 17:53:29.745538 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/__init__.py", line 22, in setup
+[Sun Aug 27 17:53:29.745695 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Sun Aug 27 17:53:29.745735 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]   File "/home/pi/Envs/megasite/local/lib/python2.7/site-packages/django/utils/log.py", line 75, in configure_logging
+[Sun Aug 27 17:53:29.746039 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]     logging_config_func(logging_settings)
+[Sun Aug 27 17:53:29.746079 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]   File "/usr/lib/python2.7/logging/config.py", line 794, in dictConfig
+[Sun Aug 27 17:53:29.747122 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]     dictConfigClass(config).configure()
+[Sun Aug 27 17:53:29.747165 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]   File "/usr/lib/python2.7/logging/config.py", line 576, in configure
+[Sun Aug 27 17:53:29.747237 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0]     '%r: %s' % (name, e))
+[Sun Aug 27 17:53:29.747315 2017] [wsgi:error] [pid 8428] [remote 192.168.1.1:0] ValueError: Unable to configure handler u'file': [Errno 13] Permission denied: u'/var/www/log/sgiri.com.log'

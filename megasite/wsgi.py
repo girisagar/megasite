@@ -1,3 +1,4 @@
+#! /home/pi/Envs/megasite/bin/python2.7
 """
 WSGI config for megasite project.
 
@@ -8,6 +9,10 @@ https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 """
 
 import os
+import sys
+
+sys.path.append('/var/www/sgiri.com')
+
 #
 #from django.core.wsgi import get_wsgi_application
 #from mezzanine.utils.conf import real_project_name
@@ -21,3 +26,4 @@ from whitenoise.django import DjangoWhiteNoise
 
 application = get_wsgi_application()
 application = DjangoWhiteNoise(application)
+

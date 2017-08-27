@@ -92,7 +92,7 @@ USE_MODELTRANSLATION = False
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'blog.sgiri.com']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -104,7 +104,7 @@ ALLOWED_HOSTS = ['*']
 TIME_ZONE = 'UTC'
 
 # If you set this to True, Django will use timezone-aware datetimes.
-USE_TZ = True
+USE_TZ = False 
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -118,7 +118,7 @@ LANGUAGES = (
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = True 
+DEBUG = False 
 
 SECRET_KEY = 'NLSADIUOI947NASLIDLU98U409843'
 # Whether a user's session cookie expires when the Web browser is closed.
@@ -144,23 +144,19 @@ FILE_UPLOAD_PERMISSIONS = 644
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends.mysql",
         # DB name or path to database file if using sqlite3.
         "NAME": "megasite",
         # Not used with sqlite3.
-#        "USER": "megasite_user",
+        "USER": "megasite_user",
         # Not used with sqlite3.
-#        "PASSWORD": "megasite_pass",
+        "PASSWORD": "megasite_pass",
         # Set to empty string for localhost. Not used with sqlite3.
-#        "HOST": "/cloudsql/sgiri-156214:us-central1:megasite",
+        "HOST": "localhost",
         # Set to empty string for default. Not used with sqlite3.
-#        "PORT": "3306",
+        "PORT": "3306",
     }
 }
-
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 #########
 # PATHS #
@@ -353,3 +349,45 @@ else:
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+FILE_UPLOAD_HANDLER= (
+    "django.core.files.uploadhandler.MemoryFileUploadHandler",
+    "django.core.files.uploadhandler.TemporaryFileUploadHandler"
+)
+FILE_UPLOAD_PERMISSIONS = "0644"
+
+ADMINS = (
+    ('admin', 'sagar.giri95@gmail.com'),
+)
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/var/www/log/sgiri.com.log',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers':['file'],
+            'propagate': True,
+            'level':'DEBUG',
+        },
+        'MYAPP': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+        },
+    }
+}

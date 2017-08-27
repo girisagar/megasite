@@ -38,7 +38,7 @@ urlpatterns += [
     # commented out like the others, so it's the default. You only need
     # one homepage pattern, so if you use a different one, comment this
     # one out.
-
+    url("^", include("filebrowser_safe.urls")),
     url("^$", RedirectView.as_view(url='/blog/'), name="go_to_home"),
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
 
@@ -108,3 +108,4 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # pages can use JS, CSS and images.
 handler404 = "mezzanine.core.views.page_not_found"
 handler500 = "mezzanine.core.views.server_error"
+
